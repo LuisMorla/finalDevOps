@@ -24,6 +24,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Install webpack-cli
+        run: npm install -D webpack-cli
+
       - name: Deploy to Surge
         if: ${{ success() }}
         run: |
