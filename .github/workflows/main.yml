@@ -28,4 +28,4 @@ jobs:
         if: ${{ success() }}
         run: |
           npm install -g surge
-          surge ./JS/ square-increase.surge.sh
+          surge ./ square-increase.surge.sh
