@@ -24,12 +24,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Install webpack-cli
-        run: npm install -D webpack-cli
+      - name: Build project
+        run: npm run build   # Asegúrate de que tienes un script "build" definido en tu package.json
 
       - name: Deploy to Surge
         if: ${{ success() }}
         run: |
           npm install -g surge
-          npm run build   # Asegúrate de que tienes un script "build" definido en tu package.json
-          surge ./dist square-increase.surge.sh
+          surge ./JS/ square-increase.surge.sh
