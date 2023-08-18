@@ -28,4 +28,4 @@ jobs:
         run: |
           npm install -g surge
           npm run build   # Opcionalmente, construye nuevamente tu proyecto antes del despliegue
-          surge ./ square-increase.surge.sh   
+          surge ./ --domain square-increase.surge.sh

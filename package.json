@@ -4,13 +4,13 @@
   "description": "Final Proyect",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run build" 
   },
   "author": "Luis Morla",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.6.2",
-    "deploy-test": "surge ./dist",
     "jest-environment-jsdom": "^29.6.2"
   }
 }
