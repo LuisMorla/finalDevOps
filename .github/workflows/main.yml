@@ -1,0 +1,35 @@
+name: CI/CD Workflow
+
+on: [push]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to Test Environment
+        run: |
+          # Assuming you have a deploy-test script in your package.json
+          npm run deploy-test
+
+      - name: Deploy to Surge.sh
+        run: |
+          # Install Surge globally
+          npm install -g surge
+
+          # Deploy to Surge.sh using the stored token from secrets
+          surge ./path/to/your/build-folder your-surge-domain.surge.sh -t ${{ secrets.SURGE_TOKEN }}

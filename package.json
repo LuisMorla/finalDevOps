@@ -1,0 +1,15 @@
+{
+  "name": "finalp",
+  "version": "1.0.0",
+  "description": "Final Proyect",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Luis Morla",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2"
+  }
+}
