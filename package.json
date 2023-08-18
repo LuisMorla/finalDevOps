@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "npm run build" 
+    "build": "webpack --mode production"
   },
   "author": "Luis Morla",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.6.2",
-    "jest-environment-jsdom": "^29.6.2"
+    "jest-environment-jsdom": "^29.6.2",
+    "webpack": "^5.51.1"
   }
 }
