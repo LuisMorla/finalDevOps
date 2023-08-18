@@ -27,4 +27,4 @@ jobs:
       - name: Deploy to Test Environment
         run: |
           npm install -g surge
-          surge ./dist <tudominio>.surge.sh   # Reemplaza <tudominio> con tu subdominio de Surge.sh
+          surge ./dist square-increase.surge.sh   # Reemplaza <tudominio> con tu subdominio de Surge.sh
